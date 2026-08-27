@@ -8,6 +8,10 @@ every specialist for ordinary tasks and escalates only when deeper proof is
 needed. That keeps routing helpful without turning every small request into a
 multi-agent ceremony.
 
+Every public specialist has the same 8/10 contract baseline: intake, evidence,
+handoff, and public boundary. This measures public operational completeness,
+not a claim that every domain has identical technical depth.
+
 ## Included core tools
 
 - `orchestrator_route`: return the first specialist and validation plan.

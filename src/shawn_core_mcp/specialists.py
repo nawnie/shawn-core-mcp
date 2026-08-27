@@ -29,3 +29,17 @@ KEYWORDS = {
     "ted": ("budget", "funding", "finance", "economics"),
     "agent-t": ("security", "vulnerability", "compliance", "audit"),
 }
+
+# This is contract coverage, not a claim that every specialist has identical
+# depth in every domain. It gives every public role the same intake, evidence,
+# handoff, and boundary baseline before specialist-specific tooling is added.
+PUBLIC_CONTRACT = {
+    "intake": "Orchestrator keeps a concise domain summary and opens a specialist lane only when deeper proof is needed.",
+    "evidence": "Return inspected inputs, deterministic checks, and explicit unknowns.",
+    "handoff": "Return unresolved cross-domain work to Orchestrator for rerouting.",
+    "boundary": "Do not publish, spend, expose credentials, or claim runtime success without explicit authorization and receipts.",
+    "public_contract_completeness_out_of_10": 8,
+}
+
+for specialist in SPECIALISTS.values():
+    specialist["public_contract"] = PUBLIC_CONTRACT.copy()

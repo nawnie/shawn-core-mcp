@@ -12,6 +12,7 @@ class ServerTests(unittest.TestCase):
         for name, specialist in server.SPECIALISTS.items():
             self.assertTrue(specialist["role"], name)
             self.assertTrue(specialist["aliases"], name)
+            self.assertEqual(specialist["public_contract"]["public_contract_completeness_out_of_10"], 8)
 
     def test_routing_keeps_simple_work_with_orchestrator(self):
         self.assertEqual(server.route({"task": "Rename one local file"})["specialist"], "orchestrator")
