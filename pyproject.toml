@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shawn-core-mcp"
+version = "0.1.0"
+description = "A transparent, local-first MCP control plane with specialist routing and changelog continuity."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.scripts]
+shawn-core-mcp = "shawn_core_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
