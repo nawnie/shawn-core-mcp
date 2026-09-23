@@ -14,7 +14,7 @@ not a claim that every domain has identical technical depth.
 
 ## Included core tools
 
-- `orchestrator_route`: return the first specialist and validation plan.
+- `orchestrator_route`: return the first specialist and validation plan, including the `mok-router` lane for resource-aware model/backend dispatch.
 - `token_master_audit`: inventory token-relevant local configuration facts.
 - `changelog_intake`: start a lightweight changelog subprocess plan with an
   Atlas Cartographer handoff, a local Git snapshot, and an `@github` handoff.
@@ -49,3 +49,7 @@ This repository intentionally excludes personal configuration, model and
 dataset paths, cloud credentials, client material, generated outputs, and
 private specialist implementations. GitHub publication is performed by the
 operator, not by the MCP.
+
+## MoK router boundary
+
+[Model Operating Kernel](https://github.com/nawnie/Model-Operating-Kernel) is the dedicated router/runtime specialist beneath Orchestrator. Orchestrator owns the whole user problem; MoK owns model/backend selection, resource checks, dispatch, bounded fallback, and execution receipts. Kairo remains a separate reasoning/research line and may be routed to as an expert rather than becoming the routing layer itself.
