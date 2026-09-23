@@ -8,7 +8,7 @@ from shawn_core_mcp import server
 
 class ServerTests(unittest.TestCase):
     def test_all_specialists_have_uniform_contract(self):
-        self.assertEqual(len(server.SPECIALISTS), 15)
+        self.assertEqual(len(server.SPECIALISTS), 16)
         for name, specialist in server.SPECIALISTS.items():
             self.assertTrue(specialist["role"], name)
             self.assertTrue(specialist["aliases"], name)
@@ -18,6 +18,7 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(server.route({"task": "Rename one local file"})["specialist"], "orchestrator")
         self.assertEqual(server.route({"task": "Audit Blender mesh collision"})["specialist"], "cad")
         self.assertEqual(server.route({"task": "Review xEdit master conflicts"})["specialist"], "carl")
+        self.assertEqual(server.route({"task": "Choose a local model backend within the VRAM budget"})["specialist"], "mok-router")
 
     def test_changelog_contract_uses_luna_limits(self):
         policy = server.SPECIALISTS["changelog"]["subprocess"]
