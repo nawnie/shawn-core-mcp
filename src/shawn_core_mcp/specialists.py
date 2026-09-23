@@ -4,6 +4,7 @@ from __future__ import annotations
 
 SPECIALISTS = {
     "orchestrator": {"role": "whole-problem ownership, concise cross-domain reasoning, routing, validation, and recovery", "aliases": ["@orchestrator", "orchestrator"]},
+    "mok-router": {"role": "resource-aware local model and backend selection, dispatch, fallback, and execution receipts", "aliases": ["@mok", "@mok-router", "@router"]},
     "pgv": {"role": "hospitality, property, acquisition, construction, and operations", "aliases": ["@pgv"]},
     "ted": {"role": "finance, business economics, and CFO controls", "aliases": ["@ted"]},
     "victoria": {"role": "marketing, SEO, campaigns, and discovery", "aliases": ["@victoria"]},
@@ -20,6 +21,7 @@ SPECIALISTS = {
     "changelog": {"role": "start-of-task continuity intake and end-of-task receipt-backed changelog", "aliases": ["@changelog"], "subprocess": {"model": "gpt-5.6-luna", "compact_at_tokens": 64000, "hard_context_limit_tokens": 100000}},
 }
 KEYWORDS = {
+    "mok-router": ("router", "routing", "backend", "model selection", "vram", "ollama", "llama.cpp", "vllm", "fallback"),
     "changelog": ("changelog", "worklog", "release notes", "what changed"),
     "token-master": ("token", "context", "compaction", "compression"),
     "carl": ("creation kit", "xedit", "starfield", "skyrim", "fallout", "papyrus", "sfse", "skse", "f4se"),
